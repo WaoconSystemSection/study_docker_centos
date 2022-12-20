@@ -1,0 +1,10 @@
+#docker-composeで使用するバージョン
+version: '3.8'
+
+services:
+ #サービスの名前
+  centos:
+    build: .
+    tty: true
+    command: /sbin/init
+
