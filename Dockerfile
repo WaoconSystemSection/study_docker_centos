@@ -20,6 +20,11 @@ RUN yum install -y https://dev.mysql.com/get/mysql80-community-release-el7-5.noa
 
 RUN yum install -y mysql-community-server
 
+# Composer
+RUN curl -s https://getcomposer.org/installer | php
+
+RUN mv composer.phar /usr/local/bin/composer
+
 # Enable service
 RUN systemctl enable httpd.service
 
